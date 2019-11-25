@@ -17,49 +17,6 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>随笔</title>
-    <link href="https://www.pangpang.fun/2018/10/20/essay/"/>
-    <id>https://www.pangpang.fun/2018/10/20/essay/</id>
-    <published>2018-10-20T02:29:31.000Z</published>
-    <updated>2019-11-16T13:10:31.348Z</updated>
-    
-    <content type="html"><![CDATA[<p>孤独一人。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;孤独一人。&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>恭喜RNG夺冠！！！</title>
-    <link href="https://www.pangpang.fun/2018/09/14/lpl-summer/"/>
-    <id>https://www.pangpang.fun/2018/09/14/lpl-summer/</id>
-    <published>2018-09-14T13:06:10.000Z</published>
-    <updated>2019-11-16T13:10:31.348Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="LPL牛逼！RNG牛逼！UZI牛逼！"><a href="#LPL牛逼！RNG牛逼！UZI牛逼！" class="headerlink" title="LPL牛逼！RNG牛逼！UZI牛逼！"></a>LPL牛逼！RNG牛逼！UZI牛逼！</h1>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;LPL牛逼！RNG牛逼！UZI牛逼！&quot;&gt;&lt;a href=&quot;#LPL牛逼！RNG牛逼！UZI牛逼！&quot; class=&quot;headerlink&quot; title=&quot;LPL牛逼！RNG牛逼！UZI牛逼！&quot;&gt;&lt;/a&gt;LPL牛逼！RNG牛逼！UZI牛逼！&lt;/h1&gt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>PHP使用迭代器遍历文件</title>
     <link href="https://www.pangpang.fun/2018/09/01/get-files/"/>
     <id>https://www.pangpang.fun/2018/09/01/get-files/</id>
@@ -581,6 +538,64 @@
       
       
         &lt;h2 id=&quot;题目地址&quot;&gt;&lt;a href=&quot;#题目地址&quot; class=&quot;headerlink&quot; title=&quot;题目地址&quot;&gt;&lt;/a&gt;题目地址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/reverse-string&quot; title=&quot;
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="https://www.pangpang.fun/categories/leetcode/"/>
+    
+      <category term="string" scheme="https://www.pangpang.fun/categories/leetcode/string/"/>
+    
+      <category term="easy" scheme="https://www.pangpang.fun/categories/leetcode/string/easy/"/>
+    
+    
+      <category term="leetcode" scheme="https://www.pangpang.fun/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode657. 判断路线成圈</title>
+    <link href="https://www.pangpang.fun/2018/07/31/judge-route-circle/"/>
+    <id>https://www.pangpang.fun/2018/07/31/judge-route-circle/</id>
+    <published>2018-07-31T15:41:53.000Z</published>
+    <updated>2019-11-16T13:10:31.347Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h2><p><a href="https://leetcode.com/problems/judge-route-circle" title="leetcode657" target="_blank" rel="noopener">https://leetcode.com/problems/judge-route-circle</a></p><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function judgeCircle(string $moves) :bool &#123;</span><br><span class="line">    $length = strlen($moves);</span><br><span class="line">    $x = $y = 0;</span><br><span class="line"></span><br><span class="line">    for ($i = 0; $i &lt; $length; $i++) &#123;</span><br><span class="line">        if ($moves[$i] == &apos;U&apos;) &#123;</span><br><span class="line">            $y++;</span><br><span class="line">        &#125; elseif ($moves[$i] == &apos;D&apos;) &#123;</span><br><span class="line">            $y--;</span><br><span class="line">        &#125; elseif ($moves[$i] == &apos;R&apos;) &#123;</span><br><span class="line">            $x++;</span><br><span class="line">        &#125; elseif ($moves[$i] == &apos;L&apos;) &#123;</span><br><span class="line">            $x--;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            continue;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return $x == 0 &amp;&amp; $y == 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;题目地址&quot;&gt;&lt;a href=&quot;#题目地址&quot; class=&quot;headerlink&quot; title=&quot;题目地址&quot;&gt;&lt;/a&gt;题目地址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/judge-route-circle&quot; tit
+      
+    
+    </summary>
+    
+      <category term="leetcode" scheme="https://www.pangpang.fun/categories/leetcode/"/>
+    
+      <category term="string" scheme="https://www.pangpang.fun/categories/leetcode/string/"/>
+    
+      <category term="easy" scheme="https://www.pangpang.fun/categories/leetcode/string/easy/"/>
+    
+    
+      <category term="leetcode" scheme="https://www.pangpang.fun/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Leetcode709. 转换为小写字母</title>
+    <link href="https://www.pangpang.fun/2018/07/31/to-lower-case/"/>
+    <id>https://www.pangpang.fun/2018/07/31/to-lower-case/</id>
+    <published>2018-07-31T14:40:06.000Z</published>
+    <updated>2019-11-16T13:10:31.347Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目地址"><a href="#题目地址" class="headerlink" title="题目地址"></a>题目地址</h2><p><a href="https://leetcode.com/problems/to-lower-case/description/" title="leetcode709" target="_blank" rel="noopener">https://leetcode.com/problems/to-lower-case/description/</a></p><h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function toLowerCase(string $str) :string &#123;</span><br><span class="line">    $length = strlen($str);</span><br><span class="line"></span><br><span class="line">    for ($i = 0; $i &lt; $length; $i++) &#123;</span><br><span class="line">        if (ord(&apos;A&apos;) &lt;= ord($str[$i]) &amp;&amp; ord($str[$i]) &lt;= ord(&apos;Z&apos;)) &#123;</span><br><span class="line">            $str[$i] = chr(ord($str[$i]) - ord(&apos;A&apos;) + ord(&apos;a&apos;));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return $str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;题目地址&quot;&gt;&lt;a href=&quot;#题目地址&quot; class=&quot;headerlink&quot; title=&quot;题目地址&quot;&gt;&lt;/a&gt;题目地址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://leetcode.com/problems/to-lower-case/descripti
       
     
     </summary>
